@@ -153,7 +153,7 @@ const SignUp = () => {
                             </div>
                             {/* btn section */}
                            
-                                <input type="submit" value="Create Account" className="btn font-medium text-xl mt-8 hover:text-black bg-pink-400 text-white w-96" />
+                                <input type="submit" value="Create Account" className="btn font-medium text-xl mt-8 hover:bg-pink-400 bg-pink-400 text-white w-96" />
                          
                         </form>
                         <p className='text-gray-400 text-lg mt-4'>This site is protected by reCAPTCHA and the google <br /> <span className='text-blue-800'>Privacy of Policy</span>and <span className='text-blue-800'>Terms of Service</span> apply.</p>

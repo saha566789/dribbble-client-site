@@ -5,13 +5,19 @@ import ErrorPage from './Page/ErrorPage';
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import MainLayout from './Layout/MainLayout';
 import AuthProvider from './Providers/AuthProviders';
+import Profile from './Components/Profile';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement:<ErrorPage></ErrorPage>
+    errorElement:<ErrorPage></ErrorPage>,
+  },
+  {
+    path: "/profile",
+    element: <Profile></Profile>,
+    
   },
 ]);
 

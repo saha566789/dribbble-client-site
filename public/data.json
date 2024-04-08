@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "I'm a designer looking to share my work.",
+      "image": "https://i.ibb.co/zh5s1fQ/1000-F-332241283-o-J6-Bg1-HV3-XSa-T4-CIk-Je-Evdzw3crv-Ml-Z1.jpg",
+      "details": "Most people know a designer and you'll get referrals, but your job is to find someone who's a fit for you."
+    },
+    {
+      "id": 2,
+      "name": "I'm looking to hire a designer.",
+      "image": "https://i.ibb.co/yddF1wj/a8cdf008cffbc9e581a8f7d6c5fe1861.jpg",
+      "details": "Many graphic designers advertise themselves online and show examples of their work. Reach out to individuals whose work matches what your business is looking for and set up interviews."
+    },
+    {
+      "id": 3,
+      "name": "I'm looking for design inspiration.",
+      "image": "https://i.ibb.co/6RQkr0K/3202874.webp",
+      "details": "Although you create your final designs digitally, inspiration for designers isn't limited to what you find through a screen. You can draw inspiration from introspection, social interactions, surroundings, music, nature, and architecture."
+    }
+  ]

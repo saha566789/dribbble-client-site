@@ -1,0 +1,26 @@
+.btn-warning{
+    position: relative;
+    padding: 11px 16px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: black;
+     border: 0;
+     border-style: solid;
+     border-width: 2px 2px;
+     border-color: gray;
+    transition: 0.2s;
+    overflow: hidden;
+    margin-top: 115px;
+    font-weight: bold;
+  }
+  
+  .btn-warning input[type = "file"]{
+    cursor: pointer;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: scale(3);
+    opacity: 0;
+  }
+  

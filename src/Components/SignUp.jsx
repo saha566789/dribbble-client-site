@@ -13,7 +13,7 @@ const SignUp = () => {
     const [usernameError, setUsernameError] = useState("");
     const navigate = useNavigate()
     const [time, setTime] = useState(false);
-
+    const [userName, setUserName] = useState()
     const handleCreate = event => {
         event.preventDefault();
         const form = event.target;
@@ -22,6 +22,7 @@ const SignUp = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, username, email, password);
+        setUserName(username)
         if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(password)) {
             Swal.fire('Minimum eight characters, at least one letter and one number.')
             return;
@@ -112,9 +113,20 @@ const SignUp = () => {
                                                 Username</span>
                                         }
                                     </label>
-                                    <label className="input-group">
-                                        <input type="text" name="username" placeholder="Username" className="border-none bg-[#e2e2e2]  rounded-lg p-3 w-96" required />
-                                    </label>
+                                  {usernameError?   <label className="input-group">
+                                        <input 
+                                        type="text" 
+                                        name="username" 
+                                        placeholder={`${userName}`} 
+                                        className={`border-none bg-red-200  placeholder-red-500  rounded-lg p-3 w-96`} required />
+                                    </label>:
+                                      <label className="input-group">
+                                      <input 
+                                      type="text" 
+                                      name="username" 
+                                      placeholder="Username" 
+                                      className={`border-none bg-[#e2e2e2] text-red-400  rounded-lg p-3 w-96`} required />
+                                  </label>}
                                 </div>
                             </div>
 
@@ -149,14 +161,14 @@ const SignUp = () => {
                             {/* terms & policy section */}
                             <div className='flex gap-2'>
                                 <input type="checkbox" defaultChecked className="checkbox checkbox-md mt-2" />
-                                <p className='text-gray-400 text-2xl font-medium'>Creating an account means you are okay with our <span className='text-blue-800 font-normal'>Terms of Service,Privacy of Policy</span>and our default <span className='text-blue-800 font-medium'>Notification settings</span></p>
+                                <p className='text-gray-400 text-2xl font-medium'>Creating an account means you are okay with our <span className='text-blue-800 font-normal'>Terms of Service,Privacy of Policy</span> and our default <span className='text-blue-800 font-medium'>Notification settings</span></p>
                             </div>
                             {/* btn section */}
                            
                                 <input type="submit" value="Create Account" className="btn font-medium text-xl mt-8 hover:bg-pink-400 bg-pink-400 text-white w-96" />
                          
                         </form>
-                        <p className='text-gray-400 text-lg mt-4'>This site is protected by reCAPTCHA and the google <br /> <span className='text-blue-800'>Privacy of Policy</span>and <span className='text-blue-800'>Terms of Service</span> apply.</p>
+                        <p className='text-gray-400 text-lg mt-4'>This site is protected by reCAPTCHA and the google <br /> <span className='text-blue-800'>Privacy of Policy</span> and <span className='text-blue-800'>Terms of Service</span> apply.</p>
                     </div>
                 </div>
                 <p className='absolute top-0 left-[75%] mt-2 font-medium' >Already a member? <span className='text-blue-800'>Sign in</span></p>

@@ -1,11 +1,14 @@
-import SignUp from "../Components/SignUp";
+import Footer from "../Shared/Footer";
+import Navbar from "../Shared/Navbar";
+
 
 
 const MainLayout = () => {
     
     return (
         <div>
-            <SignUp></SignUp>
+           <Navbar></Navbar>
+           <Footer></Footer>
         </div>
     );
 };

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import ErrorPage from './Page/ErrorPage';
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
-import MainLayout from './Layout/MainLayout';
 import AuthProvider from './Providers/AuthProviders';
 import Profile from './Components/Profile';
 import SelectOption from './Components/SelectOption';
@@ -11,13 +10,15 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import SignUp from './Components/SignUp';
+import MainLayout from './Layout/MainLayout';
 
 const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout></MainLayout>,
+    element:  <SignUp></SignUp>,
     errorElement:<ErrorPage></ErrorPage>,
   },
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
   {
     path: "/selectOption",
     element: <SelectOption></SelectOption>,
+    
+  },
+  {
+    path: "/email",
+    element: <MainLayout></MainLayout>,
     
   },
 ]);
